@@ -1,0 +1,25 @@
+package unicesumar.segundoBimestre;
+
+import java.util.ArrayList;
+
+public class Cliente {
+	private String nome;
+	private String cpf;
+	private ArrayList<Pet> pets;
+
+	
+	public Cliente(String nome, String cpf) {
+		this.pets=pets;
+		this.nome=nome;
+		this.cpf=cpf;
+	}
+	public String getNome() {
+		return this.nome;
+	}
+	public ArrayList<Pet> getPets(){
+	   return this.pets;	
+	}
+	public void setPet(Pet pet) {
+		this.pets.add(pet);
+	}
+}
