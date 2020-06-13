@@ -1,0 +1,15 @@
+package unicesumar.segundoBimestre;
+
+public class Procedimento {
+  private String especificacao;
+  private Pet paciente;
+  
+  public Procedimento(String especificacao, Pet paciente) {
+	 if(this.paciente != null) {
+		 throw new RuntimeException("esse procedimento ja contem um animal cadastrado");
+	 }else {
+	  this.especificacao=especificacao;
+	  this.paciente=paciente;
+	 }
+  }
+}
