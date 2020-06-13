@@ -1,0 +1,38 @@
+package unicesumar.segundoBimestre;
+
+import java.util.ArrayList;
+
+public class Pet {
+	private String apelido;
+	private int idadeAproximada;
+	private ArrayList<Cliente> donos;
+	private Doutor doutor;
+	private ArrayList<Procedimento> procedimentos;
+
+	public void setProcedimento(Procedimento procedimento) {
+		this.procedimentos.add(procedimento);
+	}
+	public Pet(String nome, int idade) {
+		this.apelido = nome;
+		this.idadeAproximada = idade;
+	}
+
+	public void setDono(Cliente dono) {
+		this.donos.add(dono);
+		dono.setPet(this);
+	}
+
+	public void setDoutor(Doutor doutor) {
+		if (doutor != null) {
+			throw new RuntimeException("este pet ja tem um doutor");
+		} else {
+			this.doutor = doutor;
+			
+		}
+	}
+
+	public ArrayList<Cliente> getDono() {
+
+		return this.donos;
+	}
+}
